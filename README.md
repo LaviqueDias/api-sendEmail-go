@@ -28,6 +28,8 @@ MAIL_FROM_NAME=Seu Nome ou Empresa
 
 > ⚠️ O PASS precisa ser um App Password em vez da senha normal. A maioria dos provedores exige que você ative 2FA/MFA pra obter esse PASS.
 
+---
+
 ## 📦 Instalação
 
 Clone o reopsitório e instale as dependências:
@@ -39,6 +41,8 @@ cd api-sendEmail-go
 go mod tidy
 ```
 
+---
+
 ## ▶️ Executando 
 
 ```bash
@@ -46,6 +50,8 @@ go run main.go
 ```
 
 > A API estará disponível em: *```http://localhost:8080```*
+
+---
 
 ## 📡 Endpoints
 
@@ -73,6 +79,8 @@ go run main.go
 - ```400 Bad Request``` — payload inválido (campos obrigatórios faltando ou só espaços em branco)
 - ```500 Internal Server Error``` — falha de autenticação ou envio via SMTP
 
+---
+
 ## 📂 Estrutura Simplificada
 
 ```bash
@@ -88,6 +96,8 @@ api-sendEmail-go/
 ├── .env                      # variáveis de ambiente (não versionar!)
 
 ```
+
+---
 
 ## 👨‍💻 Autor
 Projeto desenvolvido por [Lavique Dias](github.com/LaviqueDias) 🚀
