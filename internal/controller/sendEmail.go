@@ -27,7 +27,7 @@ func (cs *sendEmailController) SendEmail(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Email enviado com sucesso",
+		"message": "Email sent successfully",
 		"emailBody": html,
 	})
 }
