@@ -13,23 +13,6 @@ A arquitetura segue **controller → service → model**, com validação de pay
 
 ---
 
-## ⚙️ Configuração
-
-### Variáveis de ambiente
-Crie um arquivo `.env` na raiz do projeto com suas credenciais SMTP:
-
-```env
-USER=seu-email@dominio.com
-PASS=sua-app-password
-SMTP_HOST=smtp.seuprovedor.com
-SMTP_PORT=587
-MAIL_FROM_NAME=Seu Nome ou Empresa
-```
-
-> ⚠️ O PASS precisa ser um App Password em vez da senha normal. A maioria dos provedores exige que você ative 2FA/MFA pra obter esse PASS.
-
----
-
 ## 📦 Instalação
 
 Clone o reopsitório e instale as dependências:
@@ -43,13 +26,31 @@ go mod tidy
 
 ---
 
+## ⚙️ Configuração
+
+### Variáveis de ambiente
+Crie um arquivo `.env` na raiz do projeto com suas credenciais SMTP:
+
+```env
+USER=seu-email@dominio.com
+PASS=sua-app-password
+SMTP_HOST=smtp.seuprovedor.com
+SMTP_PORT=587
+MAIL_FROM_NAME=Seu Nome ou Empresa
+```
+
+> ⚠️ O PASS precisa ser um App Password em vez da senha normal. A maioria dos provedores exige que você ative 2FA/MFA para obtê-lo.
+
+---
+
+
 ## ▶️ Executando 
 
 ```bash
 go run main.go
 ```
 
-> A API estará disponível em: *```http://localhost:8080```*
+A API estará disponível em: *```http://localhost:8080```*
 
 ---
 
