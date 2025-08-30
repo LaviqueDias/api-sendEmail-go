@@ -17,18 +17,18 @@ type SMTPConfig struct {
 
 func NewSMTPConfigFromEnv() (*SMTPConfig, *rest_err.RestErr){
 	port := 587
-	if v := os.Getenv("ZOHO_SMTP_PORT"); v != "" {
+	if v := os.Getenv("SMTP_PORT"); v != "" {
 		if n, err := strconv.Atoi(v); err == nil && n > 0 {
 			port = n
 		}
 	}
-	host := os.Getenv("ZOHO_SMTP_HOST")
+	host := os.Getenv("SMTP_HOST")
 	if host == "" { host = "smtp.zoho.com" }
 
-	user := os.Getenv("ZOHO_USER")
-	pass := os.Getenv("ZOHO_PASS")
+	user := os.Getenv("USER")
+	pass := os.Getenv("PASS")
 	if user == "" || pass == "" {
-		return nil, rest_err.NewInternalServerError("missing env: ZOHO_USER or ZOHO_PASS")
+		return nil, rest_err.NewInternalServerError("missing env: USER or PASS")
 	}
 
 	from := os.Getenv("MAIL_FROM_NAME")
